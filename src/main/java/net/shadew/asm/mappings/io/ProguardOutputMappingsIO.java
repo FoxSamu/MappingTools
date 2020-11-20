@@ -250,12 +250,15 @@ public final class ProguardOutputMappingsIO {
         }
 
         MethodMapping readMethod(TypeMapping parent) throws IOException {
+            skipWs();
+            int c = cursor;
             try { // Optional line number indication
                 readInt();
                 expect(':');
                 readInt();
                 expect(':');
             } catch (ParserException ignored) {
+                cursor = c;
             }
 
             TypeDescriptor ret = readTypeDesc();         // Return type

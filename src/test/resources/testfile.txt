@@ -1,6 +1,6 @@
 net.test.ABCClass -> abc:
     net.test.DEFClass xField -> x
-    String yField -> y
+    java.lang.String yField -> y
     2:17:void aMethod() -> a
     2:17:net.test.ABCClass bMethod(net.test.DEFClass,java.lang.String) -> b
     2:17:void cMethod(int) -> c
