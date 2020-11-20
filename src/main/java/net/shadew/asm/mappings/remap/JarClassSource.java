@@ -27,7 +27,7 @@ public class JarClassSource implements ClassSource {
                   .filter(entry -> entry.getName().endsWith(".class"))
                   .map(entry -> {
                       String name = entry.getName();
-                      name = name.substring(name.length() - 6);
+                      name = name.substring(0, name.length() - 6);
                       return new Ref(name, jar, entry);
                   });
     }
